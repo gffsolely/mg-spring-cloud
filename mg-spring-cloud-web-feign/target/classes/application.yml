@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: mg-spring-cloud-web-feign
+
+server:
+  port: 8765
+#  max-http-header-size: 20480
+
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true   # 不加这个配置 feign请求会出现400错误
+
+feign:
+  hystrix:
+    enabled: true
