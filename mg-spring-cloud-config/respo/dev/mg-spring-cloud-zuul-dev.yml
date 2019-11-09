@@ -1,0 +1,10 @@
+zuul:
+  routes:
+    api-a:
+      path: /api-dev/a/**
+      #      serviceId: mg-spring-cloud-service-api  #这里可以直接负载到指定生产者
+      url: http://localhost:8763/
+    api-b:
+      path: /api-dev/b/**
+      #      serviceId: mg-spring-cloud-service-api2
+      url: http://localhost:8762/
