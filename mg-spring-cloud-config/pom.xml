@@ -11,38 +11,32 @@
     </parent>
 
     <groupId>mg.spring.cloud</groupId>
-    <artifactId>mg-spring-cloud-zuul</artifactId>
+    <artifactId>mg-spring-cloud-config</artifactId>
     <packaging>jar</packaging>
-    <name>mg-spring-cloud-zuul</name>
+    <name>mg-spring-cloud-config</name>
 
 
     <dependencies>
         <!-- Spring Boot Begin -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
         <!-- Spring Boot End -->
 
         <!-- Spring Cloud Begin -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-config</artifactId>
+            <artifactId>spring-cloud-config-server</artifactId>
         </dependency>
         <!-- Spring Cloud End -->
+
     </dependencies>
 
     <build>
@@ -51,7 +45,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>mg.spring.cloud.zuul.MgZuulApplication</mainClass>
+                    <mainClass>mg.spring.cloud.config.MgConfigApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>

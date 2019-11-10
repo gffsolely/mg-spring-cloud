@@ -1,0 +1,13 @@
+server:
+  port: 8810
+
+spring:
+  application:
+    name: mg-spring-cloud-config
+  cloud:
+    config:
+      server:
+        label: master
+        git:
+          uri: https://github.com/gffsolely/mg-spring-cloud
+          searchPaths: cofig-respos/dev/
