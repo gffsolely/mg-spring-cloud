@@ -14,5 +14,6 @@ zuul:
       path: /api/b/**
 #      serviceId: mg-spring-cloud-service-api2
       url: http://localhost:8762/
+  ignored-services: "*"  #忽略直接使用微服务名访问
 
 

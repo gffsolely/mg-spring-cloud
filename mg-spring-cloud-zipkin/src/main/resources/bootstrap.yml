@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: mg-spring-cloud-zipkin
+  main:  #解决The bean 'characterEncodingFilter' ...
+    allow-bean-definition-overriding: true
+
+server:
+  port: 9411
+
+
+#解决IllegalArgumentException: Prometheus requires that all ...
+management:
+  metrics:
+    web:
+      server:
+        auto-time-requests: false
